@@ -1,0 +1,20 @@
+name = "cloudflare-temp-email"
+main = "src/worker.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+keep_vars = true
+
+[vars]
+PREFIX = "tmp"
+DEFAULT_DOMAINS = ["temp-mail1.xyz", "temp-mail2.xyz"]
+DOMAINS = ["temp-mail1.xyz", "temp-mail2.xyz"]
+JWT_SECRET = "change-this-to-random-secret-key"
+BLACK_LIST = ""
+ENABLE_USER_CREATE_EMAIL = true
+ENABLE_USER_DELETE_EMAIL = true
+ENABLE_AUTO_REPLY = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudflare-temp-email"
+database_id = "f7ccfa1f-1832-4169-9869-7f257d977474"
